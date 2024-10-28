@@ -1,0 +1,95 @@
+.App {
+  text-align: center;
+}
+
+h1{
+  font-family: cursive;
+  font-size: 40px;
+}
+
+.App-logo_scrapx {
+  width: 200px; /* Ajusta el tamaño según sea necesario */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.App-menu_icon {
+  width: 50px; /* Ajusta el tamaño según sea necesario */
+  height: auto; /* Mantiene la proporción de la imagen */
+  /* margin-right: 500px; Ajusta el valor según sea necesario */
+  padding-right: 20px;
+}
+
+
+/* Estilos para alinear en horizontal */
+.Nombre_scrapx div {
+  display: flex;
+  align-items: center; /* Alinea verticalmente los elementos */
+  justify-content: space-between; /* Distribuye el espacio horizontalmente */
+}
+
+/* Opcional: Espaciado entre los elementos */
+.Nombre_scrapx img {
+  margin: 0 10px; /* Ajusta el margen según sea necesario */
+}
+
+.nav-container {
+  padding-left: 500px;
+  width: 250px;
+  height: auto;
+  display: flex; /* Alinea los botones en fila */
+  background-color: black; /* Fondo negro para el contenedor */
+  padding: 10px; /* Espaciado alrededor de los botones */
+  border-radius: 40px; /* Bordes redondeados en el contenedor */
+  margin-right: 100px; 
+}
+
+.nav-button {
+  background-color: black; /* Fondo negro por defecto */
+  border: 2px solid red; /* Borde del botón */
+  border-radius: 40px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  color: white; /* Color del texto */
+  font-size: 16px; /* Tamaño de la fuente */
+  display: flex; /* Usar flexbox para alinear icono y texto */
+  align-items: center; /* Centra verticalmente el contenido */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  transition: all 0.3s; /* Transición suave para efectos */
+  /* padding-left: ; */
+  margin-right: 5px; 
+}
+
+.nav-button.active {
+  background-color: white; /* Fondo blanco para el botón activo */
+  color: black; /* Color del texto para el botón activo */
+}
+
+.nav-button:hover {
+  border: 2px solid transparent; /* Oculta el borde en hover */
+}
+
+.icon {
+  margin-right: 5px; /* Espacio entre el icono y el texto */
+}
+
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
