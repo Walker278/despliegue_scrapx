@@ -1,7 +1,22 @@
-// Carrusel.js
 import React, { useEffect, useRef, useState } from 'react';
-import { data } from '../assets/Data';
-import "../assets/css/carrusel.css"; 
+import "../assets/css/carrusel.css";
+
+// Importación directa de las imágenes
+import ac1Img from '../assets/images/acoso1.png';
+import ac2Img from '../assets/images/acoso2.png';
+import ac3Img from '../assets/images/acoso3.png';
+import ac4Img from '../assets/images/acoso4.png';
+import ac5Img from '../assets/images/acoso5.png';
+import ac6Img from '../assets/images/acoso6.png';
+
+const data = [
+  { id: 1, imgUrl: ac1Img },
+  { id: 2, imgUrl: ac2Img },
+  { id: 3, imgUrl: ac3Img },
+  { id: 4, imgUrl: ac4Img },
+  { id: 5, imgUrl: ac5Img },
+  { id: 6, imgUrl: ac6Img }
+];
 
 const Carrusel = () => {
   const listRef = useRef();
@@ -16,6 +31,14 @@ const Carrusel = () => {
         behavior: "smooth",
       });
     }
+    
+    // Cambio automático de imagen cada 3 segundos
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
+    }, 5000);
+
+    // Limpiar el intervalo al desmontar el componente
+    return () => clearInterval(timer);
   }, [currentIndex]);
 
   const scrollToImage = (direction) => {
@@ -45,7 +68,7 @@ const Carrusel = () => {
           <ul ref={listRef}>
             {data.map((item) => (
               <li key={item.id}>
-                <img src={item.imgUrl} width={500} height={280} alt="carrusel" />
+                <img src={item.imgUrl} width={1500} height={200} alt="carrusel" />
               </li>
             ))}
           </ul>

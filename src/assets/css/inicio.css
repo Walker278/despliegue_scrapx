@@ -1,0 +1,42 @@
+/* archivo de estilos (por ejemplo, styles.css) */
+.boton-nuevo {
+    background-color: black; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    text-align: center; /* Centrado del texto */
+    text-decoration: none; /* Sin subrayado */
+    display: flex; /* Elemento en línea */
+    align-items: center;
+    justify-content: center;
+    font-size: 16px; /* Tamaño de fuente */
+    margin: 4px 2px; /* Espaciado externo */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    border-radius: 15px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Animación suave */
+    border: 2px solid #B8001F; /* Borde del botón */
+    margin-left: 50px;
+    position: relative;
+    top: 50px;
+  }
+  
+  .boton-nuevo:hover {
+    background-color: #eaeaea; /* Cambia el color al pasar el ratón */
+    color: black;
+  }
+  
+  .icono_agregar {
+    width: 20px; /* Ajusta el tamaño del ícono */
+    height: 20px;
+    margin-left: 15px; /* Espacio entre el ícono y el texto */
+    /* align-content: center; */
+    position:relative;
+    top: 5px;
+  }
+
+  h2{
+    margin-left: 50px;
+    position: relative;
+    top: 50px;
+  }
+  

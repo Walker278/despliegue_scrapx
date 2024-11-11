@@ -5,6 +5,7 @@ function Historial({ historial }) {
   return (
     <div>
       <h2>Historial</h2>
+      <br/>
       {historial.length === 0 ? (
         <p>No hay historial aún.</p>
       ) : (

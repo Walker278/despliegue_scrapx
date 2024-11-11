@@ -12,14 +12,6 @@ h1{
   height: auto; /* Mantiene la proporción de la imagen */
 }
 
-.App-menu_icon {
-  width: 50px; /* Ajusta el tamaño según sea necesario */
-  height: auto; /* Mantiene la proporción de la imagen */
-  /* margin-right: 500px; Ajusta el valor según sea necesario */
-  padding-right: 20px;
-}
-
-
 /* Estilos para alinear en horizontal */
 .Nombre_scrapx div {
   display: flex;
@@ -34,33 +26,37 @@ h1{
 
 .nav-container {
   padding-left: 500px;
-  width: 250px;
-  height: auto;
+  width: 500px;
+  height: 50px;
   display: flex; /* Alinea los botones en fila */
   background-color: black; /* Fondo negro para el contenedor */
   padding: 10px; /* Espaciado alrededor de los botones */
   border-radius: 40px; /* Bordes redondeados en el contenedor */
-  margin-right: 100px; 
+  margin-left: 50px; 
+  border: 4px solid #0D0CB5; /* Borde del botón */
 }
 
 .nav-button {
+  width: 240px;
   background-color: black; /* Fondo negro por defecto */
-  border: 2px solid red; /* Borde del botón */
+  /* border: 2px solid red; Borde del botón */
   border-radius: 40px; /* Bordes redondeados */
   padding: 10px 20px; /* Espaciado interno del botón */
   color: white; /* Color del texto */
-  font-size: 16px; /* Tamaño de la fuente */
+  font-size: 25px; /* Tamaño de la fuente */
   display: flex; /* Usar flexbox para alinear icono y texto */
   align-items: center; /* Centra verticalmente el contenido */
   cursor: pointer; /* Cambia el cursor al pasar el mouse */
   transition: all 0.3s; /* Transición suave para efectos */
   /* padding-left: ; */
   margin-right: 5px; 
+  justify-content: center;
 }
 
 .nav-button.active {
   background-color: white; /* Fondo blanco para el botón activo */
   color: black; /* Color del texto para el botón activo */
+  border: 2px solid red; /* Borde del botón */
 }
 
 .nav-button:hover {
@@ -70,8 +66,6 @@ h1{
 .icon {
   margin-right: 5px; /* Espacio entre el icono y el texto */
 }
-
-
 
 .App-header {
   background-color: #282c34;
@@ -83,6 +77,34 @@ h1{
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+/* Estilo para el botón de menú */
+.button-menu {
+  font-size: 40px; 
+  background-color: transparent; /* Fondo transparente */
+  color: #333; /* Color del icono */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambia el cursor */
+  padding: 8px; /* Espaciado interno para el área de clic */
+  border-radius: 50%; /* Hace el botón circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease; /* Transición suave de color */
+  transform: translateX(-40px); /* Desplaza el botón sin afectar su área de clic */
+}
+
+/* Cambio de color en hover */
+.button-menu:hover {
+  color: #555; /* Color al pasar el mouse */
+}
+
+/* Tamaño del icono dentro del botón */
+.button-menu .MuiSvgIcon-root {
+  font-size: 40px; /* Tamaño del icono */
+}
+
+
 
 
 @keyframes App-logo-spin {

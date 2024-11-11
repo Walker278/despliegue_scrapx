@@ -1,0 +1,92 @@
+.modal-nuevo-style {
+    width:auto;
+    height:auto;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    outline: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrando el modal */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.modal-header {
+    display:flex;               /* Usar flexbox para alinear el título y el botón de cerrar */
+    justify-content: space-between; /* Espaciado entre el título y el botón */
+    align-items: center;        /* Alinear verticalmente al centro */
+    margin-bottom: 10px;       /* Espaciado inferior entre el encabezado y el contenido */
+}
+
+.modal-nuevo-title {
+    color: black;
+    font-weight: bold;
+    margin: 0;
+    position: relative;
+    top: 3px; /* Ajusta el valor para moverlo hacia arriba */
+}
+
+.close-button {
+    color: black;               /* Color del texto del botón de cerrar */
+}
+
+.seleccion-opciones{
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content:center; /* Distribuye el espacio horizontalmente */
+}
+
+
+
+.button-automatico {
+    margin-top: 20px;
+    background-color: black; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    text-align: center; /* Centrado del texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Elemento en línea */
+    font-size: 16px; /* Tamaño de fuente */
+    margin: 4px 2px; /* Espaciado externo */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    border-radius: 15px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Animación suave */
+    border: 2px solid #0D0CB5; /* Borde del botón */
+    margin-left: 50px;
+    position: relative;
+    top: 5px;
+}
+
+.button-automatico:hover {
+    background-color: #eaeaea; /* Cambia el color al pasar el ratón */
+    color: black;
+}
+
+.button-configuracion {
+    /* margin-top: 20px; */
+    background-color: black; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    text-align: center; /* Centrado del texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Elemento en línea */
+    font-size: 16px; /* Tamaño de fuente */
+    margin: 4px 2px; /* Espaciado externo */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    border-radius: 15px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Animación suave */
+    border: 2px solid #B8001F; /* Borde del botón */
+    margin-left: 50px;
+    margin-right: 50px;
+    position: relative;
+    top: 5px;
+}
+
+.button-configuracion:hover {
+    background-color: #eaeaea; /* Cambia el color al pasar el ratón */
+    color: black;
+}
