@@ -58,8 +58,8 @@ async function main() {
 
   console.log(noticiasData);
 
-  const filePath_csv = `../src/csv/noticias_${formato}.csv`;
-  const filePath_xlsx = `../src/xlsx/noticias_${formato}.xlsx`;
+  const filePath_csv = `../documents/csv/noticias_${formato}.csv`;
+  const filePath_xlsx = `../documents/xlsx/noticias_${formato}.xlsx`;
 
   if (existsSync(filePath_csv)) {
     console.log("El archivo csv existe");
@@ -70,7 +70,7 @@ async function main() {
       csv += `${noticia.titulo}, ${noticia.noticiero}, ${noticia.descripcion} \n`;
     });
 
-    await fs.writeFile(`../csv/noticias_${formato}.csv`, csv);
+    await fs.writeFile(`../documents/csv/noticias_${formato}.csv`, csv);
     console.log('Archivo csv creado')
   }
 
@@ -81,7 +81,7 @@ async function main() {
     const wb = xlsx.utils.book_new()
     xlsx.utils.book_append_sheet(wb, ws, 'Noticias')
 
-    await fs.writeFile(`../xlsx/noticias_${formato}.xlsx`, xlsx.write(wb, {type: 'buffer', bookType: 'xlsx'}))
+    await fs.writeFile(`../documents/xlsx/noticias_${formato}.xlsx`, xlsx.write(wb, {type: 'buffer', bookType: 'xlsx'}))
 
     console.log('Archivo xlsx creado')
   }
