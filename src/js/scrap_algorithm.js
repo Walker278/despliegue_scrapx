@@ -2,6 +2,11 @@ const fs = require("fs/promises");
 const puppeteer = require("puppeteer");
 const xlsx = require("xlsx");
 const { existsSync } = require("fs");
+const axios = require('axios');
+
+
+const API_KEY_GOOGLE = 'AIzaSyDwcW1Gkn_NHIMyfSjl_gYSJltXGEOjBE8'; 
+const CX = '55dcc8a1678d546a0'; 
 
 const API_KEY = "9601ea90b803e661ae1ac47da8766edb";
 const URL = "https://www.google.com/search?sca_esv=439ed1f28d78315f&sxsrf=ADLYWIJahYgZfHEvkG40dsdPFmMFZMuSxQ:1730347689561&q=acoso&tbm=nws&source=lnms&fbs=AEQNm0CbCVgAZ5mWEJDg6aoPVcBgWizR0-0aFOH11Sb5tlNhdzvguW7TJ8ZJj4v-NOGupFjybypXATN8-ElM0wR8g3shT0H2getaBJGy1Fy_gJM3BOq0g-_4p_I27ERf2G5MCUxTiZHKKFIrCWpydjBr00cSGQnIeNCg7Bnp5cfQY7elO3YREZ2uJfbm4k0SrvNKANbHgMa3jwOxrSqHH73jkAnNR_VqOg&sa=X&ved=2ahUKEwjF8f6637eJAxXa78kDHaFEKxYQ0pQJegQIExAB&biw=1920&bih=955&dpr=1";

@@ -39,7 +39,6 @@ const readline = require('readline');
   nlp.addDocument('es', 'Empujar o golpear a alguien de manera intencional', 'acoso.fisico');
   nlp.addDocument('es', 'Sujetar a una persona por el brazo o la ropa de forma agresiva o sin su consentimiento.', 'acoso.fisico');
   nlp.addDocument('es', 'Rodear a alguien en un espacio cerrado, bloqueando su salida y forzándolo a interactuar físicamente.', 'acoso.fisico');
-
   nlp.addDocument('es', 'Te empujé porque lo necesitaba, ¿qué pasa?', 'acoso.fisico');
   nlp.addDocument('es', 'Te sujeté del brazo porque no me dejabas hablar.', 'acoso.fisico');
   nlp.addDocument('es', 'Si no te apartas, te voy a golpear.', 'acoso.fisico');
@@ -51,11 +50,9 @@ const readline = require('readline');
   nlp.addDocument('es', 'No te muevas, voy a decidir por ti.', 'acoso.fisico');
   nlp.addDocument('es', 'Te hice un daño, pero no te preocupes, no es para tanto.', 'acoso.fisico');
 
-  
   nlp.addDocument('es', 'Enviar correos electrónicos o mensajes de texto con amenazas o comentarios crueles para infundir miedo a la víctima.', 'acoso.cibernetico');
   nlp.addDocument('es', 'Compartir información falsa, difamatoria o personal en línea para dañar la reputación de alguien.', 'acoso.cibernetico');
   nlp.addDocument('es', 'Publicar comentarios hirientes o ataques repetidos en las redes sociales para burlarse o avergonzar a la persona públicamente.', 'acoso.cibernetico');
-
   nlp.addDocument('es', 'Te voy a difamar en todas las redes sociales para que nadie te crea.', 'acoso.cibernetico');
   nlp.addDocument('es', 'Voy a enviarle a todos tus contactos fotos privadas sin tu permiso.', 'acoso.cibernetico');
   nlp.addDocument('es', '¿Sabías que todos se burlan de ti en internet? ¡Me encanta!', 'acoso.cibernetico');
