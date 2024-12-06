@@ -24,15 +24,11 @@ const Carrusel = () => {
 
   useEffect(() => {
     const listNode = listRef.current;
-    const imgNode = listNode.querySelectorAll("li > img")[currentIndex];
+    const offset = currentIndex * 100; // Calcula el desplazamiento basado en el índice actual
+    listNode.style.transform = `translateX(-${offset}%)`;
+    listNode.style.transition = "transform 0.5s ease-in-out";
 
-    if (imgNode) {
-      imgNode.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
-    
-    // Cambio automático de imagen cada 3 segundos
+    // Cambio automático de imagen cada 5 segundos
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
     }, 5000);
@@ -43,15 +39,9 @@ const Carrusel = () => {
 
   const scrollToImage = (direction) => {
     if (direction === 'prev') {
-      setCurrentIndex((curr) => {
-        const isFirstSlide = currentIndex === 0;
-        return isFirstSlide ? 0 : curr - 1;
-      });
+      setCurrentIndex((curr) => (curr > 0 ? curr - 1 : curr));
     } else {
-      const isLastSlide = currentIndex === data.length - 1;
-      if (!isLastSlide) {
-        setCurrentIndex((curr) => curr + 1);
-      }
+      setCurrentIndex((curr) => (curr < data.length - 1 ? curr + 1 : curr));
     }
   };
 
@@ -65,10 +55,10 @@ const Carrusel = () => {
         <div className="leftArrow" onClick={() => scrollToImage('prev')}>&#10092;</div>
         <div className="rightArrow" onClick={() => scrollToImage('next')}>&#10093;</div>
         <div className="container-images">
-          <ul ref={listRef}>
+          <ul ref={listRef} className="carousel-list">
             {data.map((item) => (
-              <li key={item.id}>
-                <img src={item.imgUrl} width={1500} height={200} alt="carrusel" />
+              <li key={item.id} className="carousel-item">
+                <img src={item.imgUrl} alt="carrusel" />
               </li>
             ))}
           </ul>

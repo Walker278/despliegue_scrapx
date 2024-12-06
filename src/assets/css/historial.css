@@ -1,0 +1,39 @@
+/* historial.css */
+.historial-container {
+    margin-left: -20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.tarjetas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Siempre 4 columnas por fila */
+    gap: 20px; /* Espaciado entre tarjetas */
+    justify-items: center; /* Centrar las tarjetas dentro de cada celda */
+    margin-right: 20px;
+}
+
+.no-historial {
+    text-align: center;
+    color: #888;
+    font-size: 16px;
+}
+
+/* Reglas responsivas para pantallas más pequeñas */
+@media (max-width: 1200px) {
+    .tarjetas-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 900px) {
+    .tarjetas-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas aún más pequeñas */
+    }
+}
+
+@media (max-width: 600px) {
+    .tarjetas-grid {
+        grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+    }
+}

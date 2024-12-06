@@ -40,3 +40,30 @@
     top: 50px;
   }
   
+  .recentTargets{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Siempre 4 columnas por fila */
+    gap: 20px; /* Espaciado entre tarjetas */
+    justify-items: center; /* Centrar las tarjetas dentro de cada celda */
+    margin-right: 30px;
+  }
+
+  /* Reglas responsivas para pantallas más pequeñas */
+@media (max-width: 1200px) {
+  .recentTargets {
+      grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 900px) {
+  .recentTargets {
+      grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas aún más pequeñas */
+  }
+}
+
+@media (max-width: 600px) {
+  .recentTargets {
+      grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+  }
+}
+

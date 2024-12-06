@@ -1,0 +1,46 @@
+/* Tarjeta.css */
+.tarjeta {
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 22px;
+  background-color: #000;
+  text-align: center;
+  margin: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-left: 50px;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta-content {
+  padding: 10px;
+}
+
+.tarjeta h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.tarjeta p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #fff;
+}
+
+.tarjeta strong {
+  font-weight: bold;
+}
+
+/* Si el borde en la clase .descr es intencional, agrégale un color definido */
+.descr {
+  border: 1px solid #fff;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+}

@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 50px;
+}
+
+.logo img {
+    align-items: center;
+    width: 150px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.social-media a {
+    margin-right: 10px;
+}
+
+.social-media img {
+    width: 24px;
+}
+
+.banner {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin: 20px 0;
+}
+
+.banner .quote p {
+    font-size: 24px;
+}
+
+.banner .quote span {
+    font-size: 16px;
+    display: block;
+    margin-top: 15px;
+}
+
+.new-btn {
+    background-color: #8bf5c2;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.recent-tweets {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    border-radius: 40px;
+}
+
+.tweet {
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tweet img {
+    width: 100%;
+}
+
+
+/* Estilo básico del contenedor del carrusel */
+
+.banner{
+    margin: 0 50px;           /* 50px de margen a ambos lados (izquierda y derecha) */
+    background-color: black;  /* Fondo negro */
+    border-radius: 20px;      /* Bordes redondeados de 30px */
+    overflow: hidden;         /* Asegura que las esquinas redondeadas afecten todo el contenido */
+    padding: 20px 0;          /* Espacio superior e inferior opcional, ajustable */
+}
+
+.carousel {
+    /* margin: 20px 0; */
+    margin: 0 50px;  /* 50px de margen a la izquierda y derecha */
+    border-radius: 10px;  /* Borde redondeado */
+    overflow: hidden; 
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.carousel-control-prev, 
+.carousel-control-next {
+    width: center;
+    height: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #888;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.carousel-indicators .active {
+    background-color: #333;
+}
+
+.carousel-item {
+    height: 100px; /* Ajusta esta altura según tus imágenes */
+}
+
+.carousel-item img {
+    /* object-fit: cover;
+    height: 100%; */
+    border-radius: 10px;  /* Redondear también las imágenes dentro del carrusel */
+    width: 100%;          /* Asegura que las imágenes ocupen todo el espacio del carrusel */
+    object-fit: cover;    /* Asegura que las imágenes se ajusten sin distorsión */
+}
+
+.content{
+    /* display: flex; */
+    justify-content: center;  /* Centrar horizontalmente */
+    flex-wrap: wrap;   
+    padding: 50px 50px;  
+}
+
+.card-img-top {
+    background-color: black;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card {
+    margin-bottom: 20px;
+    border-radius: 30px;
+}
+
+.custom-card {
+    margin-bottom: 20px;
+    /* Opcional: añade margen para ajustar el espaciado entre tarjetas */
+}
+
+.card {
+    /* Ajusta el ancho máximo si quieres reducir el tamaño */
+    max-width: 100%;
+    align-items: center
+    /* display:flex-start; */
+}
+
+@media (min-width: 768px) {
+    .col-md-2 {
+        /* Para que ocupe menos espacio y puedas ver bien las 5 cards */
+        flex: 0 0 19%;
+        max-width: 19%;
+        /* display: flex; */
+        align-items: center;
+    }
+}

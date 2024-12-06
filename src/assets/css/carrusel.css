@@ -1,43 +1,49 @@
+/* Lista de imágenes */
 ul {
-  background-color: black;
-  list-style: none;
-  white-space: nowrap;
+  display: flex; /* Asegura que las imágenes estén en línea */
+  padding: 0;
+  margin: 0;
+  transition: transform 0.5s ease-in-out; /* Animación suave para el desplazamiento */
 }
 
 li {
-  display: inline;
-  /* Puedes agregar más estilo aquí si es necesario */
+  flex: 0 0 100%; /* Cada imagen ocupa el 100% del contenedor */
 }
 
 img {
-  width: 1500px;  /* Ancho de 1020 píxeles */
-  height: 200px;  /* Alto de 100 píxeles */
-  object-fit: cover; /* Mantiene la proporción de la imagen y cubre el contenedor */
-  margin-top: 0; /* Ajusta según sea necesario */
+  width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+  height: 200px; /* Mantén la altura fija */
+  object-fit: cover; /* Mantiene proporciones mientras llena el contenedor */
+  margin-top: 0;
 }
 
 /* Main container */
 .main-container {
-  /* background-color: black; */
-  width: 100%; /* Cambiado para ser responsivo */
+  width: 100%; /* 100% del ancho disponible */
   max-width: 1440px; /* Ancho máximo */
-  height: 200px;
-  margin: 15px auto; /* Centrado automático */
+  height: 200px; /* Altura del carrusel */
+  margin: 15px auto; /* Centrado */
   position: relative;
-  /* border: 2px solid black; Borde del botón */
-  /* border-radius: 20px; */
 }
 
 /* Slider container */
 .slider-container {
   position: relative;
   height: 100%;
+  /* overflow: hidden; Oculta las imágenes fuera del marco del carrusel */
 }
 
 /* Dots carrusel */
 .dots-container {
   display: flex;
   justify-content: center;
+  margin-top: 10px; /* Espacio debajo del carrusel */
+}
+
+#modal-analisis-title {
+  flex-grow: 1; /* Permite que el texto ocupe el espacio central */
+  text-align: center; /* Centra el texto en su área */
+  margin: 0; /* Elimina márgenes extra */
 }
 
 .dot-container-item {
@@ -45,45 +51,42 @@ img {
   cursor: pointer;
   font-size: 12px;
   text-align: center;
+  border-radius: 50%;
+}
+
+.dot-container-item.active {
+  background-color: #9e9999; /* Cambia el color para el punto activo */
+  width: 14px;
+  height: 16px;
+  border-radius: 50%;
 }
 
 /* Arrows */
-.leftArrow {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  left: 32px;
-  font-size: 50px;
-  font-weight: 700;
-  color: #fff;
-  z-index: 1;
-  cursor: pointer;
-}
-
+.leftArrow,
 .rightArrow {
   position: absolute;
   top: 50%;
-  transform: translate(0, -50%);
-  right: 32px;
+  transform: translateY(-50%);
   font-size: 50px;
-  font-weight: 700;
+  font-weight: bold;
   color: #fff;
-  z-index: 1;
   cursor: pointer;
+  z-index: 1;
 }
 
+.leftArrow {
+  left: 10px;
+}
+
+.rightArrow {
+  right: 10px;
+}
+
+/* Container de imágenes */
 .container-images {
   width: 100%;
   height: 100%;
   border-radius: 20px;
   border: 1px solid #eee;
   overflow: hidden;
-}
-
-/* Active dot */
-.dot-container-item.active {
-  background: #ccc;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
 }
